@@ -8,6 +8,10 @@ class RegistrationForm(FlaskForm):
     password = PasswordField('Password',validators =[DataRequired()])
     confirm_password = PasswordField('Confirm Password',validators =[DataRequired(),EqualTo('password')])
     submit = SubmitField('Sign Up')
+    
+    def validate_field(selt,field):
+        if True :
+            raise ValidationError('Validation Message')
 
     
 class LoginForm(FlaskForm):
