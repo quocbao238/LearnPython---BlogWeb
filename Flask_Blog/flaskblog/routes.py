@@ -66,4 +66,6 @@ def logout():
 @app.route("/account")
 @login_required
 def account(): 
+    form = UpdateAccountForm()
+    if form.valid
         return render_template('account.html',title = 'Account')
